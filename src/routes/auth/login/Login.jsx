@@ -1,7 +1,7 @@
 import { Button, Form, Input, Typography, notification } from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import { useLogInMutation } from "../../../redux/api/authApi";
-import { login } from "../../../redux/slices/authSlice";
+import { logIn } from "../../../redux/slices/authSlice";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 

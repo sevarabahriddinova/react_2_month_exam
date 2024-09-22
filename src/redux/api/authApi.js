@@ -1,10 +1,10 @@
-import { api } from "/index";
+import { api } from "./index";
 
 const authApi = api.injectEndpoints({
   endpoints: (build) => ({
     signUp: build.mutation({
       query: (body) => ({
-        url: "/signup",
+        url: "/register",
         method: "POST",
         body
       }),
