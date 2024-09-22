@@ -1,9 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useGetUserByIdQuery } from "../../redux/api/productsApi";
-// import { Container } from "../../utils";
 import { Card, Typography, Spin } from 'antd';
 import { TbBrandGravatar } from "react-icons/tb";
-
 import { Link } from "react-router-dom";
 
 const { Meta } = Card;
