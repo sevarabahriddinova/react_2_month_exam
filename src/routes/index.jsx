@@ -6,7 +6,7 @@ const Auth = lazy(() => import('../routes/auth/Auth'));
 const Login = lazy(() => import('../routes/auth/login/Login'));
 const SignUp = lazy(() => import('../routes/auth/signup/SignUp'));
 const Users = lazy(() => import('../routes/users/Users')); 
-const Createusers = lazy(() => import('../routes/create/Createuser')); 
+const Createusers= lazy(()=>import('../routes/create/Createuser')) ; 
 const NotFound = lazy(() => import('../routes/not-found/NotFound'));
 
 const RouteController = () => {
@@ -43,5 +43,4 @@ const RouteController = () => {
     }
   ]);
 };
-
 export default RouteController;

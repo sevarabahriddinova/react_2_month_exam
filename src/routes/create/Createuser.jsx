@@ -1,34 +1,17 @@
-import { Button, Form, Input, Typography, notification } from "antd";
-import {  useNavigate } from "react-router-dom";
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { Button, Form, Input, Typography } from "antd";
 import { useCreateUsersMutation } from "../../redux/api/createUserApi";
-const {Title, Text} = Typography;
+const {Title} = Typography;
 
-const Createuser = () => {
-
+const Createuser = () =>{
+  const [createUsers] = useCreateUsersMutation();
 
     const onFinishFailed = (errorInfo) => {
         console.log("Failed:", errorInfo);
       };
       const onFinish = (values) => {
         createUsers(values);
-      };
-      
-      const navigate = useNavigate();
-      const [createUsers, {data, isSuccess}] = useCreateUsersMutation();
-    
-      useEffect(() => {
-        if(isSuccess){  
-          
-          notification.success({
-            message: "Successfully logged in! Go ahed 😊"
-          })
-          navigate("/")
-        }
-      }, [isSuccess])
-    
-  return (
+      }; 
+  return(
     <>
    <Form
       className="p-4 w-[400px] "
@@ -56,8 +39,8 @@ const Createuser = () => {
       </Form.Item>
 
       <Form.Item
-        label="Job"
-        name="job"
+        label="Pasword"
+        name="pasword"
         rules={[
           {
             required: true,
@@ -78,5 +61,4 @@ const Createuser = () => {
     </>
   )
 }
-
 export default Createuser
