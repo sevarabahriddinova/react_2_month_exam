@@ -10,12 +10,7 @@ const { Meta } = Card;
 const Product = () => {
 
     const { data } = useGetUserQuery();
-    
- 
-
     console.log(data);
-
-
     return (
         <>
             <div className='my-10 w-[1200px] m-auto'>

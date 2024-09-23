@@ -5,7 +5,8 @@ const Home = lazy(() => import('../routes/home/Home'));
 const Auth = lazy(() => import('../routes/auth/Auth'));
 const Login = lazy(() => import('../routes/auth/login/Login'));
 const SignUp = lazy(() => import('../routes/auth/signup/SignUp'));
-const Users = lazy(() => import('../routes/users/Users')); // Missing import added
+const Users = lazy(() => import('../routes/users/Users')); 
+const Createusers = lazy(() => import('../routes/create/Createuser')); 
 const NotFound = lazy(() => import('../routes/not-found/NotFound'));
 
 const RouteController = () => {
@@ -30,8 +31,12 @@ const RouteController = () => {
     },
     {
       path: "/users/:id",
-      element: <Suspense><Users/></Suspense> // Profile component correctly referenced
+      element: <Suspense><Users/></Suspense>
     },
+    {
+      path: "/create",
+      element: <Suspense><Createusers/></Suspense>
+  },
     {
       path: "*",
       element: <Suspense><NotFound/></Suspense>
