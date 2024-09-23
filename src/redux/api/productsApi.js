@@ -6,12 +6,13 @@ const productsApi = api.injectEndpoints({
       query: () => ({
         url: "/users?page=2"
       }),
-      providesTags: [""]
+      providesTags: ["USERS"]
     }),
     getUserById: build.query({ 
       query: (id) => ({
         url: `/users/${id}`
       }),
+      providesTags: ["USERS"]
     }),
     createUsers: build.mutation({
       query: (body) => ({
@@ -19,6 +20,7 @@ const productsApi = api.injectEndpoints({
         method: "POST",
         body
       }),
+      invalidatesTags: ["USERS"]
     }),
   }),
   overrideExisting: false, 

@@ -13,8 +13,9 @@ const Createuser = () =>{
       }; 
   return(
     <>
+   <div className="w-[1200px] m-auto mt-14">
    <Form
-      className="p-4 w-[400px] "
+      className="p-6 w-[400px] m-auto  bg-purple-400 rounded-xl  flex flex-col items-center "
       name="basic"
       layout="vertical"
       initialValues={{
@@ -25,7 +26,7 @@ const Createuser = () =>{
       autoComplete="off"
     >
       <Title level={2} className="text-center">Craete Users</Title>
-      <Form.Item
+      <Form.Item className="w-full"
         label="Name"
         name="name"
         rules={[
@@ -38,7 +39,7 @@ const Createuser = () =>{
         <Input />
       </Form.Item>
 
-      <Form.Item
+      <Form.Item className="w-full"
         label="Pasword"
         name="pasword"
         rules={[
@@ -52,12 +53,13 @@ const Createuser = () =>{
       </Form.Item>
 
       <Form.Item>
-        <Button  type="primary" htmlType="submit">
+        <Button  className="text-center w-full" type="primary" htmlType="submit">
           Create User
         </Button>
       </Form.Item>
         
     </Form>
+   </div>
     </>
   )
 }
