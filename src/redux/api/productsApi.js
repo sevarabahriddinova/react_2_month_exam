@@ -6,16 +6,24 @@ const productsApi = api.injectEndpoints({
       query: () => ({
         url: "/users?page=2"
       }),
+      providesTags: [""]
     }),
     getUserById: build.query({ 
       query: (id) => ({
         url: `/users/${id}`
       }),
     }),
+    createUsers: build.mutation({
+      query: (body) => ({
+        url: "/users",
+        method: "POST",
+        body
+      }),
+    }),
   }),
   overrideExisting: false, 
 });
 
-export const { useGetUserQuery, useGetUserByIdQuery } = productsApi;
+export const { useGetUserQuery, useGetUserByIdQuery, useCreateUsersMutation } = productsApi;
 
 export default productsApi

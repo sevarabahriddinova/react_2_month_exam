@@ -1,5 +1,5 @@
 import { Button, Form, Input, Typography } from "antd";
-import { useCreateUsersMutation } from "../../redux/api/createUserApi";
+import { useCreateUsersMutation } from "../../redux/api/productsApi";
 const {Title} = Typography;
 
 const Createuser = () =>{
